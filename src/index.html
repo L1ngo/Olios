@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
+	<meta name="keywords" content="<%= htmlWebpackPlugin.options.keywords %>">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!-- og format -->
+	<meta property="og:title" content="">
+	<!-- bar color -->
+	<meta name="theme-color" content="#fff">
+	<meta name="msapplication-navbutton-color" content="#fff">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+	<!-- favicon -->
+	<!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">-->
+	<!--<link rel="apple-touch-icon" href="images/apple-touch-icon152.png" sizes="152x152">-->
+	<title>Olios</title>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+</head>
+<body>
+<div class="wrapper" id="wrapper">
+	<%= _.template(require('./parts/header.html'))() %>
+	<div class="app" id="app">
+		<div class="main">
+			<div class="swiper-container container">
+				<div class="swiper-wrapper main__wrapper">
+					<div class="swiper-slide">
+						<p class="bg-text">NEWEST</p>
+						<h1 class="main__title">Olios</h1>
+						<h2 class="main__description">Newest furniture shop template</h2>
+						<a href="#" class="btn">VIEW MORE</a>
+					</div>
+
+					<div class="swiper-pagination"></div>
+				</div>
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/swiper/js/swiper.js"></script>
+	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+</div>
+</body>
+</html>

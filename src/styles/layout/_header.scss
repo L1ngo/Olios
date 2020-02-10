@@ -1,0 +1,56 @@
+/* header */
+
+.header {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	align-items: center;
+	height: 100vh;
+	width: 145px;
+	padding: 35px 0 100px;
+	box-shadow: 3px 0 5px 0 rgba(0, 0, 0, .2);
+	background-color: $white;
+
+	&__logo {
+		width: 42px;
+		margin-bottom: 150px;
+
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	&__nav-list {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		height: calc(100vh - 320px);
+
+		li{
+			width: 100%;
+			margin-bottom: 85px;
+
+			a:hover svg path {
+				fill: $blue;
+			}
+
+			svg{
+				width: 32px;
+				height: 32px;
+
+				path{
+					fill: $gray;
+					transition: .3s;
+				}
+			}
+
+		}
+
+		li:last-of-type{
+			margin-top: auto;
+			margin-bottom: 0;
+		}
+	}
+
+}
