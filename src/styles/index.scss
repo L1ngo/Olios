@@ -8,7 +8,10 @@
 @import "components/reset";
 @import "components/app";
 @import "components/buttons";
+@import "components/extends";
 
 /*!* layout parts *!*/
 @import "layout/header";
 @import "layout/footer";
+@import "layout/top";
+@import "layout/search";

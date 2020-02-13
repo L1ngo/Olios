@@ -5,6 +5,7 @@
 	width: 100%;
 	max-width: 100%;
 	min-height: 1px;
+	flex-grow: 1;
 
 	&__title {
 		font-weight: 700;
@@ -16,77 +17,5 @@
 		font-weight: 700;
 		font-size: 20px;
 		line-height: 32px;
-	}
-}
-
-.container {
-	position: relative;
-	display: block;
-	width: 100%;
-	max-width: 1570px;
-	min-height: 650px;
-	margin: 0 auto;
-	padding: 0 40px;
-	box-sizing: border-box;
-}
-
-.main {
-	height: 100vh;
-	background-image: url("/images/main/main-bg.png");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-
-	&__wrapper {
-		padding-top: 155px;
-		text-align: center;
-
-		p {
-			position: absolute;
-			top: 10%;
-			left: 0;
-			transform: translateX(-2%);
-			color: rgba(0, 0, 0, .02);
-			font-family: Lato, sans-serif;
-			font-weight: 900;
-			font-size: 355px;
-			line-height: 359px;
-		}
-	}
-
-	&__title {
-		margin-bottom: 15px;
-		text-transform: uppercase;
-		font-family: Lato, sans-serif;
-		font-weight: 300;
-		font-size: 220px;
-		line-height: 224px;
-	}
-
-	&__description {
-		margin-bottom: 33px;
-		text-transform: uppercase;
-		font-family: Lato, sans-serif;
-		font-weight: 300;
-		font-size: 36px;
-		line-height: 40px;
-	}
-
-	.btn {
-		border: 2px solid $blue;
-		max-width: 215px;
-		background-color: $blue;
-		border-radius: 35px;
-		color: $white;
-		font-family: Lato, sans-serif;
-		font-weight: 900;
-		font-size: 18px;
-		line-height: 22px;
-		transition: .3s;
-	}
-
-	.btn:hover{
-		color: $black;
-	background-color: transparent;
 	}
 }
