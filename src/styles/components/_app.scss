@@ -3,9 +3,44 @@
 .app {
 	display: block;
 	width: 100%;
+	height: 100vh;
+	padding-top: 88px;
+	padding-left: 145px;
 	max-width: 100%;
 	min-height: 1px;
 	flex-grow: 1;
+	background-image: url("#{$images}main/main-bg.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+
+	&_product {
+		padding-top: 0;
+	}
+
+	@include media('<=desktop_lg') {
+		padding-top: 66px;
+		padding-left: 120px;
+
+		&_product {
+			padding-top: 0;
+		}
+	}
+
+	@include media('<=desktop') {
+		padding-top: 48px;
+		padding-left: 87px;
+
+		&_product {
+			padding-top: 0;
+		}
+	}
+
+	@include media('<=tablet') {
+		padding-top: 100px;
+		padding-left: 0;
+	}
+
 
 	&__title {
 		font-weight: 700;
@@ -17,5 +52,13 @@
 		font-weight: 700;
 		font-size: 20px;
 		line-height: 32px;
+	}
+
+	.text-blue {
+		color: $blue;
+	}
+
+	.text-gray{
+		color: $gray;
 	}
 }

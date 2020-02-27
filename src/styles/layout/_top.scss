@@ -1,27 +1,10 @@
 .main {
-	padding-top: 80px;
-	height: 100vh;
-	background-image: url("#{$images}main/main-bg.png");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-
-	@include media('<=desktop_lg') {
-		padding-top: 66px;
-	}
-
-	@include media('<=desktop') {
-		padding-top: 48px;
-	}
-
-	@include media('<=tablet') {
-		padding-top: 25px;
-	}
 
 	&__burger {
 		display: block;
-		position: relative;
-		margin-left: calc(100% - 145px);
+		position: absolute;
+		top: 65px;
+		right: 45px;
 		width: 87px;
 		height: 87px;
 		background-color: $white;
@@ -39,8 +22,14 @@
 
 		@include media('<=desktop') {
 			margin-left: calc(100% - 87px);
+			top: 50px;
+			right: 35px;
 			width: 53px;
 			height: 53px;
+		}
+
+		@include media('<=tablet'){
+			top: 25px;
 		}
 
 		@include media('<=phone') {
@@ -430,6 +419,7 @@
 		font-size: 18px;
 		line-height: 22px;
 		transition: .3s;
+		z-index: 5;
 
 		@include media('<=desktop_lg') {
 			padding: 11px 0 9px;
@@ -445,7 +435,7 @@
 			max-width: 132px;
 		}
 
-		@include media('<=phone'){
+		@include media('<=phone') {
 			padding: 5px 0 5px;
 			font-size: 12px;
 			line-height: 16px;
@@ -515,6 +505,5 @@
 			left: 40%;
 		}
 	}
-
 }
 
