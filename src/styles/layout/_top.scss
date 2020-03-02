@@ -29,11 +29,11 @@
 		}
 
 		@include media('<=tablet'){
-			top: 25px;
+			top: 30px;
 		}
 
 		@include media('<=phone') {
-			margin-left: calc(100% - 60px);
+			right: 15px;
 			width: 40px;
 			height: 40px;
 		}
@@ -105,34 +105,29 @@
 	}
 
 	&__nav {
+		display: flex;
+		flex-direction: column;
 		position: fixed;
 		top: 0;
 		left: 100%;
 		transform: translateY(0);
-		width: 375px;
+		width: 300px;
 		height: 100vh;
-		padding: 70px;
+		padding: 0 50px 75px;
 		background-color: white;
 		box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
-		z-index: 3;
+		z-index: 5;
 		transition: .3s;
 
-		@include media('<=desktop_lg') {
-			width: 310px;
-			padding: 0 50px;
-		}
-
 		@include media('<=desktop') {
-			width: 310px;
-			padding: 0 50px;
+			width: 280px;
+			padding: 0 40px 50px;
 		}
 
 		@include media('<=tablet') {
-			width: 260px;
-			padding: 0 33px;
+			width: 250px;
+			padding: 0 20px 40px;
 		}
-
-
 	}
 
 	&__nav_open {
@@ -148,16 +143,10 @@
 	&__nav-list {
 		display: none;
 		max-height: 900px;
-		margin-top: calc(2.5 / 2 * 100%);
+		margin-top: 100%;
 		max-width: 375px;
 
-		@include media('<=desktop_lg') {
-			margin-top: calc(3 / 2 * 100%);
-			max-height: 650px;
-		}
-
 		@include media('<=desktop') {
-			margin-top: calc(1.5 / 2 * 100%);
 			max-height: 600px;
 		}
 
@@ -172,10 +161,6 @@
 		li {
 			padding: 30px 0;
 			width: 100%;
-
-			@include media('<=desktop_lg') {
-				padding: 20px 0;
-			}
 
 			@include media('<=desktop') {
 				padding: 20px 0;
@@ -206,10 +191,6 @@
 		@include media('<=desktop') {
 			font-size: 14px;
 			line-height: 18px;
-		}
-
-		@include media('<=desktop') {
-			justify-content: center;
 		}
 	}
 
@@ -270,19 +251,10 @@
 		flex-direction: column;
 		align-items: center;
 		padding-bottom: 20px;
-		margin-top: 300px;
-
-		@include media('<=desktop_lg') {
-			padding-bottom: 15px;
-		}
+		margin-top: auto;
 
 		@include media('<=desktop') {
-			margin-top: calc(100vh - 650px);
 			padding-bottom: 10px;
-		}
-
-		@include media('<=tablet') {
-			margin-top: calc(100vh - 600px);
 		}
 
 		@include media('<=phone-xs') {
@@ -449,9 +421,10 @@
 	}
 
 	.top-slider {
-		height: calc(100vh - 155px);
+		height: calc(100vh - 100px);
 
 		@include media("<=tablet") {
+			height: calc(100vh - 130px);
 			padding-top: 80px;
 		}
 	}
@@ -501,8 +474,13 @@
 		}
 
 		@include media('<=desktop') {
-			bottom: -1%;
-			left: 40%;
+			bottom: 0;
+			left: 35%;
+		}
+
+		@include  media('<=phone'){
+			bottom: 0;
+			left: 0;
 		}
 	}
 }

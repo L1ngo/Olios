@@ -1,6 +1,12 @@
 .product {
 	display: flex;
 
+	@include media('<=phone') {
+		flex-direction: column;
+		overflow-y: scroll;
+		height: 100%;
+	}
+
 	&__block-main {
 		display: flex;
 		flex-direction: column;
@@ -18,10 +24,15 @@
 		@include media('<=tablet'){
 			height: calc(100vh - 100px);
 		}
+
+		@include media('<=phone') {
+			width: 100%;
+			padding: 30px;
+		}
 	}
 
 	&__like {
-		margin: 0 65px 160px auto;
+		margin: 0 65px 80px auto;
 		width: 27px;
 		height: 27px;
 
@@ -35,7 +46,7 @@
 		}
 
 		@include media('<=desktop') {
-			margin: 0 47px 115px auto;
+			margin: 0 47px 70px auto;
 			width: 22px;
 			height: 22px;
 		}
@@ -69,7 +80,6 @@
 
 	&__items-zoom {
 		display: flex;
-		margin-left: -150px;
 
 		span {
 			padding: 5px;
@@ -98,7 +108,6 @@
 		}
 
 		@include media('<=desktop') {
-			margin-right: -100px;
 		}
 
 		@include media ('<=tablet'){
@@ -109,7 +118,6 @@
 
 	&__items-rest {
 		display: flex;
-		margin-right: -130px;
 
 		span {
 			width: 30px;
@@ -134,10 +142,6 @@
 			}
 		}
 
-		@include media('<=desktop') {
-			margin-right: -100px;
-		}
-
 		@include media ('<=tablet'){
 			margin-right: 0;
 			margin-left: 0;
@@ -160,6 +164,10 @@
 		@include media('<=tablet'){
 			height: calc(100vh - 100px);
 		}
+
+		@include media('<=phone') {
+			width: 100%;
+		}
 	}
 
 	&__desc {
@@ -172,8 +180,12 @@
 		}
 
 		@include media('<=tablet'){
-			margin-left: 30px;
+			margin-left: 20px;
 			max-width: 420px;
+		}
+
+		@include media('<=phone'){
+			margin: 0 20px;
 		}
 	}
 
@@ -196,6 +208,12 @@
 			font-size: 25px;
 			line-height: 29px;
 			margin-bottom: 50px;
+		}
+
+		@include media('<=phone'){
+			font-size: 20px;
+			line-height: 24px;
+			margin-bottom: 20px;
 		}
 	}
 
@@ -222,6 +240,11 @@
 			font-size: 35px;
 			line-height: 39px;
 		}
+
+		@include media('<=phone'){
+			font-size: 25px;
+			line-height: 29px;
+		}
 	}
 
 	&__text {
@@ -246,6 +269,10 @@
 
 		@include media('<=desktop') {
 			max-width: 450px;
+		}
+
+		@include media('<=desktop'){
+			margin-bottom: 20px;
 		}
 	}
 
@@ -346,6 +373,14 @@
 			font-size: 11px;
 			line-height: 15px;
 		}
+
+
+		@include media('<=phone'){
+			max-width: 100px;
+			font-size: 10px;
+			line-height: 14px;
+			padding: 5px 0;
+		}
 	}
 
 	&__btn:hover {
@@ -361,6 +396,10 @@
 
 		@include media('<=desktop') {
 			padding: 30px 0;
+		}
+
+		@include media('<=phone'){
+			flex-direction: column;
 		}
 	}
 
@@ -378,9 +417,21 @@
 		text-align: center;
 
 		@include media('<=desktop') {
-			margin: 0 45px;
+			 margin: 0 45px;
+			 font-size: 20px;
+			 line-height: 24px;
+		 }
+
+		@include media('<=tablet') {
+			margin: 0 10px;
 			font-size: 20px;
 			line-height: 24px;
+		}
+
+		@include media('<=phone'){
+			margin: 10px 0 20px;
+			transform: rotate(0);
+			writing-mode: horizontal-tb;
 		}
 	}
 
@@ -388,23 +439,39 @@
 		display: flex;
 		width: 100%;
 
+		@include media('<=phone'){
+			flex-direction: column;
+		}
+
 		li {
 			width: calc(100% / 3);
 			max-width: 220px;
 			margin-right: 82px;
 
+			a{
+				p{
+					text-decoration: none;
+				}
+			}
+
 			&:last-child {
 				margin-right: 0;
 				margin-left: 25px;
 
-				@include media('<=desktop') {
-
+				@include media('<=phone'){
+					margin: 0;
 				}
 			}
 
 			@include media('<=desktop') {
 				margin-right: 0;
 				margin-left: 20px;
+			}
+
+			@include media('<=phone'){
+				width: 100%;
+				max-width: 100%;
+				margin: 0;
 			}
 		}
 	}
@@ -425,6 +492,10 @@
 		@include media('<=desktop') {
 			max-width: 130px;
 		}
+
+		@include media('<=phone') {
+			margin: 0 auto;
+		}
 	}
 
 	&__list-title {
@@ -432,6 +503,12 @@
 		font-weight: 300;
 		font-size: 19px;
 		line-height: 23px;
+		text-transform: uppercase;
+		color: $black;
+
+		@include media('<=phone') {
+			text-align: center;
+		}
 	}
 
 	&__list-desc {
@@ -440,5 +517,9 @@
 		font-size: 12px;
 		line-height: 16px;
 		color: #c3c3c3;
+
+		@include media('<=phone') {
+			text-align: center;
+		}
 	}
 }

@@ -6,37 +6,31 @@
 	position: fixed;
 	align-items: center;
 	height: 100vh;
-	width: 145px;
-	padding: 35px 0 100px;
+	width: 110px;
+	padding: 25px 0 75px;
 	box-shadow: 3px 0 5px 0 rgba(0, 0, 0, .2);
 	background-color: $white;
 	z-index: 5;
 
-	@include media('<=desktop_lg') {
-		width: 120px;
-		padding: 28px 0 80px;
-	}
-
 	@include media('<=desktop') {
-		width: 87px;
-		padding: 20px 0 60px;
+		width: 90px;
+		padding: 20px 0 50px;
 	}
 
 	@include media('<=tablet') {
 		flex-direction: row;
-		height: 100px;
 		width: 100vw;
-		padding: 0;
+		height: 100px;
+		padding: 0 35px;
+	}
+
+	@include media('<=phone-xs'){
+		padding: 0 10px;
 	}
 
 	&__logo {
 		width: 42px;
 		margin-bottom: 150px;
-
-		@include media('<=desktop_lg') {
-			width: 35px;
-			margin-bottom: 124px;
-		}
 
 		@include media('<=desktop') {
 			width: 25px;
@@ -44,8 +38,8 @@
 		}
 
 		@include media('<=tablet') {
-			margin: 0 0 0 15px;
 			width: 35px;
+			margin-bottom: 0;
 		}
 
 		img {
@@ -54,25 +48,21 @@
 		}
 	}
 
+	&__nav {
+		height: 100%;
+	}
+
 	&__nav-list {
 		display: flex;
 		flex-direction: column;
 		text-align: center;
-		height: calc(100vh - 320px);
-
-		@include media('<=desktop_lg') {
-			height: calc(100vh - 260px);
-		}
-
-		@include media('<=desktop') {
-			height: calc(100vh - 190px);
-		}
+		height: 100%;
 
 		@include media('<=tablet') {
 			flex-direction: row;
 			height: 100%;
 			margin-left: 30px;
-			margin-top: 10px;
+			align-items: center;
 		}
 	}
 
@@ -80,21 +70,18 @@
 		width: 100%;
 		margin-bottom: 75px;
 
-		@include media('<=desktop_lg') {
-			margin-bottom: 60px;
-		}
-
 		@include media('<=desktop') {
 			margin-bottom: 45px;
 		}
 
 		@include media('<=tablet') {
-			margin-bottom: 0;
 			margin-right: 30px;
+			margin-bottom: 0;
+			width: 30px;
+			height: 100%;
 		}
 
-		@include media('<=phone-xs'){
-			margin-bottom: 0;
+		@include media('<=phone-xs') {
 			margin-right: 20px;
 		}
 
@@ -106,19 +93,14 @@
 			width: 32px;
 			height: 32px;
 
-			@include media('<=desktop_lg') {
-				width: 28px;
-				height: 28px;
-			}
-
 			@include media('<=desktop') {
-				width: 18px;
-				height: 18px;
+				width: 25px;
+				height: 25px;
 			}
 
 			@include media('<=tablet') {
-				width: 23px;
-				height: 23px;
+				width: 20px;
+				height: 20px;
 			}
 
 			path {
@@ -133,8 +115,16 @@
 		margin-bottom: 0;
 
 		@include media('<=tablet') {
-			margin-bottom: 0;
-			margin-right: 0;
+			margin: 0;
+		}
+	}
+
+	&__nav-icon{
+
+		@include media('<=tablet') {
+			display: block;
+			padding: 40px 5px;
+			height: 100px;
 		}
 	}
 }
