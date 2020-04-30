@@ -65,7 +65,7 @@
   },
   "dependencies": {
     "include-media": "^1.4.9",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "normalize-scss": "^7.0.1",
     "rxjs": "^6.5.2",
     "swiper": "^5.3.1"
